@@ -1,0 +1,76 @@
+# Creating Admin Table
+CREATE TABLE Admin
+(UserID VARCHAR(30) PRIMARY KEY,
+ Password VARCHAR(30) NOT NULL);
+ 
+ INSERT INTO Admin VALUES
+('Karthik', 'GHizubgoea1'),
+('Suganya', 'ugnOSdno12'),
+('Aadithya','Gioen121'),
+('Akhila', 'Afoispi12_'),
+('Shyam','Hewrfqa123'),
+('Bhaskaran', 'ai198abui'),
+('Pardhu', 'taufw9012'),
+('Karl', 'juhiva@41'),
+('KEKW', 'BRUH');
+
+# Creating Stock_inventory
+CREATE TABLE Stock_Inventory(
+Barcode_No VARCHAR(40) PRIMARY KEY,
+Item_Name VARCHAR(40) NOT NULL,
+Price DECIMAL(7,2) NOT NULL,
+Qty INTEGER(7) NOT NULL);
+
+INSERT INTO Stock_Inventory (Barcode_No, Item_Name, Price, Qty) VALUES 
+('395849302948', 'Amul Cheese', '40', '20'),
+('584938602145', 'Dabur Honey', '35', '50'),
+('583925748329', 'Milo Protein Shake', '80', '60'),
+('496059682345', 'Iodex Rapid Relief', '25', '40'),
+('674560697821', 'Volini Spray', '50', '30'),
+('593285948692', 'Biscuits', '50', '15'),
+('789695849302', 'Broom', '45', '20'),
+('576894096857', 'Maggi Noodles', '90', '60'),
+('1232342237968', 'Flair Ink pen', '35', '50'),
+('555685940396', 'Coconut Oil', '45', '30'),
+('106938592857', 'PepsodentG toothpaste', '55', '70'),
+('555684968503', 'Turmeric Power', '350', '60'),
+('555854569302', 'Gulab Jamun Mix', '140', '50'),
+('186758493456', 'Everest Chilli Powder', '76', '70'),
+('125467453564', 'Washing Liquid', '175', '2');
+
+# Creating employee table
+CREATE TABLE employee(
+empno VARCHAR(10) PRIMARY KEY,
+NAME VARCHAR(30) NOT NULL,
+job VARCHAR(30) NOT NULL,
+hiredate DATE NOT NULL,
+phone VARCHAR(10) NOT NULL,
+salary DECIMAL(10,2) NOT NULL,
+bonus DECIMAL(7,2));
+
+INSERT INTO employee VALUES
+(143568, 'Surendar','Cashier','2022-02-02','9548534596',45000,2500),
+(123568, 'Sundar','stock arranger','2022-02-02','9545697596',35000, 200),
+(134568, 'Velan','Janitor','2022-02-04','9345697596',10000, 500),
+(134456, 'Santhosh','Watchman','2022-01-05','923981596',10000, 1000),
+(167456, 'Pranav','Manager','2021-03-25','9324965001',50000, 4000),
+(189456, 'Murugan','Stock Arranger','2021-12-06','9324300091',15000, 1000),
+(189877, 'Lakshmi','Stock Arranger','2022-01-06','9324223910',15000, 1000),
+(189977, 'Latha','Customer Assistant','2021-10-01','9324245630',20000, 1000),
+(189787, 'Ramesh','Delivery Driver','2020-10-01','934565630',15000, 1000),
+(144577, 'Kapil','Delivery Driver','2020-10-20','933365630',15000, 1000),
+(144567, 'Ahmed','Customer Assitant','2019-12-13','9344502930',50000, 5000),
+(134927, 'Murugalakshmi','Customer Assitant','2019-11-13','9344514698',50000, 5000),
+(122226, 'Siva','Delivery Driver','2019-12-13','9344545330',20000,NULL),
+(122227, 'Shanmugam','Watchman','2019-11-13','9333259330',10000,2000),
+(1222278, 'Anandhi','Customer Assistant','2018-12-22','9333224340',48000,5000);
+
+
+# Creating Customer Table
+CREATE TABLE Customer
+(NAME VARCHAR(30) NOT NULL,
+ PHONE_NO VARCHAR(10) NOT NULL,
+ BARCODE_NO VARCHAR(40) NOT NULL,
+ ADDRESS VARCHAR(150) NOT NULL,
+ QTY INTEGER(7) NOT NULL,
+ DATE TIMESTAMP PRIMARY KEY);
